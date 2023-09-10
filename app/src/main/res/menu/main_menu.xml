@@ -14,4 +14,10 @@
         android:title="Delete"
         app:showAsAction="always"/>
 
+    <item
+        android:id="@+id/action_nextItem"
+        android:icon="@drawable/ic_baseline_next"
+        android:title="Delete"
+        app:showAsAction="always"/>
+
 </menu>

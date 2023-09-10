@@ -1,4 +1,4 @@
-package com.codelab.calculator;
+package com.codelab.calculator.activities;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -18,6 +19,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.codelab.calculator.R;
 import com.codelab.calculator.adapters.ItemRecyclerAdapter;
 import com.codelab.calculator.adapters.SaleRecyclerAdapter;
 import com.codelab.calculator.callbacks.CodeClickCallback;
@@ -100,6 +102,9 @@ public class SaleActivity extends AppCompatActivity implements CodeClickCallback
                 return  true;
             case R.id.action_deleteItem:
                 viewModel.deleteAllItem();
+                return true;
+            case R.id.action_nextItem:
+               startActivity(PostActivity.newIntent(getApplicationContext()));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
